@@ -1,4 +1,6 @@
 # 3D Portfolio Showcase
+![ezgif-8bffd4dbcef6e104](https://github.com/user-attachments/assets/b8d61114-6d2b-44df-83d6-305c20a40f86)
+
 
 A high-end, immersive web portfolio gallery featuring advanced 3D interactions, smooth animations, and premium typography. This project is built with React, TypeScript, and Tailwind CSS, focusing on a "cinematic" user experience without heavy WebGL libraries.
 
