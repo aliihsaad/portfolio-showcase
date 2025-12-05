@@ -1,20 +1,57 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 3D Portfolio Showcase
 
-# Run and deploy your AI Studio app
+A high-end, immersive web portfolio gallery featuring advanced 3D interactions, smooth animations, and premium typography. This project is built with React, TypeScript, and Tailwind CSS, focusing on a "cinematic" user experience without heavy WebGL libraries.
 
-This contains everything you need to run your app locally.
+## ✨ Key Features
 
-View your app in AI Studio: https://ai.studio/apps/drive/1RKVRh6g_ucKNXnCyodvRo4zoFmPrtn9N
+### 1. Interactive 3D Card Carousel
+- **Central Focus:** The main stage features a 3D card deck that transitions vertically.
+- **Physics-based Transitions:** Cards rotate and scale smoothly (`cubic-bezier` easing) as they enter or exit the viewport, creating a physical "flipping" sensation.
+- **Parallax & Glare:** On desktop, cards react to mouse movement with a gyroscope-like 3D tilt and dynamic light glare that follows the cursor.
+- **Hover Zoom:** Aggressive scale-up effect on hover for an immersive look.
+- **Slideshow:** Supports multiple images per project. Hovering on desktop cycles through them; mobile devices auto-play.
 
-## Run Locally
+### 2. 3D Wheel Navigation
+- **Sidebar Component:** A visual 3D cylinder located on the right side of the screen.
+- **True 3D Transforms:** Uses CSS `rotateX` and `translateZ` to arrange numbers in a perfect circle.
+- **Interactive:** Functional on both Desktop (Click) and Mobile (Touch/Drag) to scroll through projects.
 
-**Prerequisites:**  Node.js
+### 3. Typography Effects ("Scatter")
+- **Custom Component:** `ScatterText.tsx` splits text strings into individual characters.
+- **Interaction:** On hover, characters explode/scatter randomly in 3D space (translation, rotation, scale) and reassemble smoothly when the mouse leaves.
+- **Premium Fonts:** Uses 'Syne' for headers and 'Space Grotesk'/'Inter' for body text.
 
+### 4. Atmospheric Backgrounds
+- **Interactive Grid:** A specialized `Canvas` component (`GridBackground.tsx`) draws a perspective grid that scrolls infinitely towards a horizon. It adjusts its blending mode based on the theme (Light/Dark).
+- **Ambient Lighting:** Large, slow-moving gradient blobs providing a "breathing" color atmosphere.
+- **Film Grain:** A subtle SVG noise overlay adds texture and prevents color banding.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 5. Responsive & Adaptive
+- **Mobile First Logic:**
+  - Layout shifts from a vertical stack (Mobile/Tablet) to a horizontal row (Desktop).
+  - "Hover" effects are replaced by "Breathing" auto-animations on touch devices.
+  - Touch swipe gestures enabled for main screen navigation.
+- **Tablet Optimization:** Specific sizing and layout adjustments for iPad/Tablet viewports.
+
+## 🛠 Tech Stack
+
+- **Framework:** React 19
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS + Custom CSS Modules (for 3D `preserve-3d` contexts)
+- **Icons:** Lucide React
+- **Fonts:** Google Fonts (Syne, Space Grotesk, Inter)
+- **Animation:** CSS Transitions & Native RequestAnimationFrame (no heavy animation libraries like GSAP or Framer Motion used, ensuring lightweight performance).
+
+## 📂 Project Structure
+
+- `App.tsx` - Main layout and state manager (Navigation, Theme, Gestures).
+- `components/ProjectCard.tsx` - The core 3D card component with parallax and slideshow logic.
+- `components/WheelNavigation.tsx` - The rotating sidebar navigation.
+- `components/ScatterText.tsx` - The text hover effect component.
+- `components/GridBackground.tsx` - Canvas-based background rendering.
+- `constants.ts` - Project data (Images, Titles, Colors).
+- `types.ts` - TypeScript definitions.
+
+## 🎨 Customization
+
+To add your own projects, simply edit `constants.ts`. The app automatically adapts the theme (Dark/Light) based on the `textColor` property defined for each project.
