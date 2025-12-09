@@ -61,24 +61,8 @@ const App: React.FC = () => {
     if (isRightSwipe) handlePrev();
   };
 
-  // Wheel navigation (Desktop Mouse Wheel)
-  const lastScrollTime = useRef(0);
-  useEffect(() => {
-    const handleWheel = (e: WheelEvent) => {
-      const now = Date.now();
-      if (now - lastScrollTime.current < 1000) return; // Debounce scroll
-      
-      if (e.deltaY > 0) {
-        handleNext();
-        lastScrollTime.current = now;
-      } else if (e.deltaY < 0) {
-        handlePrev();
-        lastScrollTime.current = now;
-      }
-    };
-    window.addEventListener('wheel', handleWheel);
-    return () => window.removeEventListener('wheel', handleWheel);
-  }, [currentIndex, isAnimating]);
+  // Global Wheel Event Listener REMOVED to satisfy request:
+  // "the wheel should only scroll when the cursore is hoveing on it"
 
   // Helper to determine the visual state of a card based on its index relative to current
   const getCardStyle = (index: number) => {

@@ -1,24 +1,6 @@
 # 3D Portfolio Showcase
-![ezgif-8bffd4dbcef6e104](https://github.com/user-attachments/assets/b8d61114-6d2b-44df-83d6-305c20a40f86)
 
-
-# 3D Portfolio Showcase
-
-  A cinematic, immersive portfolio gallery built with React, TypeScript, and Tailwind CSS.
-Designed to feel physical, emotional, and alive — transforming a simple portfolio into a digital exhibition where every card tilts, reacts, and moves with intention.
-
-No WebGL. No heavy animation libraries.
-Pure CSS transforms + native browser rendering.
-
-## 🚀 Why This Exists
- Most portfolios display content.
-This one performs it.
-
-The goal was to build an interface that behaves like a living object:
-cards that tilt with depth, text that scatters like particles, grids that fade into infinity, and navigation that feels mechanical, precise, and satisfying.
-
-You don’t scroll this gallery —
-you enter it.
+A high-end, immersive web portfolio gallery featuring advanced 3D interactions, smooth animations, and premium typography. This project is built with React, TypeScript, and Tailwind CSS, focusing on a "cinematic" user experience without heavy WebGL libraries.
 
 ## ✨ Key Features
 
@@ -73,7 +55,3 @@ you enter it.
 ## 🎨 Customization
 
 To add your own projects, simply edit `constants.ts`. The app automatically adapts the theme (Dark/Light) based on the `textColor` property defined for each project.
-
-## ⭐ Support This Project
-
-If you enjoyed this experience, starring the repository helps it grow and motivates further updates.
